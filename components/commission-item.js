@@ -12,14 +12,16 @@ export default class CommissionItem extends React.Component {
         return (
             <View style={itemstyles.icontainer}>
                 <Text style={itemstyles.text}>{this.props.title}</Text>
-                {this.props.type !== 'percent' ? <Text style={itemstyles.text}>$</Text> : null}
-                <TextInput
-                    style={{ fontSize: 30 }}
-                    placeholder="0"
-                    onChangeText={val => this.props.value(val)}
-                    keyboardType="numeric"
-                />
-                {this.props.type === 'percent' ? <Text style={itemstyles.text}>%</Text> : null}
+                <View style={itemstyles.input}>
+                    {this.props.type !== 'percent' ? <Text style={itemstyles.text}>$</Text> : null}
+                    <TextInput
+                        style={{ fontSize: 30 }}
+                        placeholder="0"
+                        onChangeText={val => this.props.value(val)}
+                        keyboardType="numeric"
+                    />
+                    {this.props.type === 'percent' ? <Text style={itemstyles.text}>%</Text> : null}
+                </View>
             </View>
         );
     }
@@ -29,10 +31,16 @@ const itemstyles = StyleSheet.create({
         flex: 1,
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'space-evenly'
+        justifyContent: 'space-between'
     },
     text: {
         fontSize: 25,
         fontFamily: 'sans-serif'
+    },
+    input: {
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'flex-end'
     }
 });
