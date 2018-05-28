@@ -1,6 +1,10 @@
 {
   "expo": {
     "sdkVersion": "27.0.0",
-    "name": "Commissions"
+    "name": "Commissions",
+    "splash": {
+      "image": "./pug.png",
+      "backgroundColor": "#ffffff"
+    }
   }
 }

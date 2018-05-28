@@ -32,7 +32,7 @@ export default class Commission extends React.Component {
         return (
             <View style={styles.container}>
                 <View style={styles.top}>
-                    <Text style={styles.total}>{this.commission() ? ("$" + this.commission().toFixed(2)) : ""}</Text>
+                    <Text style={styles.total}>{this.commission() ? ("$" + this.commission().toFixed(2)) : "$0"}</Text>
                     <Text style={styles.gst}>{this.commission() ? ("GST: $" + this.gst().toFixed(2)) : ""}</Text>
                 </View>
                 <View style={styles.itemcontainer}>
@@ -47,7 +47,7 @@ export default class Commission extends React.Component {
                 </View>
             </View>
         );
-    }
+    } dsadasdsa
 }
 
 const styles = StyleSheet.create({
