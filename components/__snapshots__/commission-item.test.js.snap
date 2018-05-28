@@ -5,9 +5,11 @@ exports[`renders correctly 1`] = `
   style={
     Object {
       "alignItems": "center",
+      "backgroundColor": "transparent",
       "flex": 1,
       "flexDirection": "row",
-      "justifyContent": "space-evenly",
+      "justifyContent": "space-between",
+      "maxHeight": 100,
     }
   }
 >
@@ -17,34 +19,59 @@ exports[`renders correctly 1`] = `
     ellipsizeMode="tail"
     style={
       Object {
+        "color": "#000000",
         "fontFamily": "sans-serif",
-        "fontSize": 25,
+        "fontSize": 20,
       }
     }
   />
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
+  <View
     style={
       Object {
-        "fontFamily": "sans-serif",
-        "fontSize": 25,
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "borderBottomWidth": 1.5,
+        "borderColor": "rgb(211,211,211)",
+        "borderRadius": 5,
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "flex-end",
+        "maxWidth": 120,
+        "padding": 5,
       }
     }
   >
-    $
-  </Text>
-  <TextInput
-    allowFontScaling={true}
-    keyboardType="numeric"
-    onChangeText={[Function]}
-    placeholder="0"
-    style={
-      Object {
-        "fontSize": 30,
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#bbbbbb",
+          "fontFamily": "sans-serif",
+          "fontSize": 20,
+        }
       }
-    }
-  />
+    >
+      $
+    </Text>
+    <TextInput
+      allowFontScaling={true}
+      keyboardType="phone-pad"
+      multiline={false}
+      onChangeText={[Function]}
+      placeholder="0"
+      placeholderTextColor="#bbbbbb"
+      selectTextOnFocus={true}
+      style={
+        Object {
+          "color": "#000000",
+          "fontSize": 20,
+          "margin": 5,
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+  </View>
 </View>
 `;

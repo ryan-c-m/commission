@@ -5,34 +5,58 @@ exports[`renders correctly 1`] = `
   style={
     Object {
       "alignItems": "center",
+      "backgroundColor": "white",
       "flex": 1,
       "flexDirection": "column",
       "justifyContent": "center",
     }
   }
 >
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
+  <View
     style={
       Object {
-        "fontSize": 30,
         "marginBottom": 20,
         "marginTop": 60,
       }
     }
   >
-    Commissions
-  </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#000000",
+          "fontSize": 35,
+        }
+      }
+    >
+      
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontSize": 20,
+          "marginTop": 20,
+        }
+      }
+    >
+      
+    </Text>
+  </View>
   <View
     style={
       Object {
         "alignItems": "stretch",
-        "backgroundColor": "#fff",
+        "backgroundColor": "white",
         "flex": 1,
         "flexDirection": "column",
+        "justifyContent": "flex-start",
         "minWidth": 300,
+        "padding": 20,
       }
     }
   >
@@ -40,9 +64,11 @@ exports[`renders correctly 1`] = `
       style={
         Object {
           "alignItems": "center",
+          "backgroundColor": "transparent",
           "flex": 1,
           "flexDirection": "row",
-          "justifyContent": "space-evenly",
+          "justifyContent": "space-between",
+          "maxHeight": 100,
         }
       }
     >
@@ -52,45 +78,72 @@ exports[`renders correctly 1`] = `
         ellipsizeMode="tail"
         style={
           Object {
+            "color": "#000000",
             "fontFamily": "sans-serif",
-            "fontSize": 25,
+            "fontSize": 20,
           }
         }
       >
         Sale price
       </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
+      <View
         style={
           Object {
-            "fontFamily": "sans-serif",
-            "fontSize": 25,
+            "alignItems": "center",
+            "backgroundColor": "white",
+            "borderBottomWidth": 1.5,
+            "borderColor": "rgb(211,211,211)",
+            "borderRadius": 5,
+            "flex": 1,
+            "flexDirection": "row",
+            "justifyContent": "flex-end",
+            "maxWidth": 120,
+            "padding": 5,
           }
         }
       >
-        $
-      </Text>
-      <TextInput
-        allowFontScaling={true}
-        keyboardType="numeric"
-        onChangeText={[Function]}
-        placeholder="0"
-        style={
-          Object {
-            "fontSize": 30,
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#bbbbbb",
+              "fontFamily": "sans-serif",
+              "fontSize": 20,
+            }
           }
-        }
-      />
+        >
+          $
+        </Text>
+        <TextInput
+          allowFontScaling={true}
+          keyboardType="phone-pad"
+          multiline={false}
+          onChangeText={[Function]}
+          placeholder="0"
+          placeholderTextColor="#bbbbbb"
+          selectTextOnFocus={true}
+          style={
+            Object {
+              "color": "#000000",
+              "fontSize": 20,
+              "margin": 5,
+            }
+          }
+          underlineColorAndroid="transparent"
+        />
+      </View>
     </View>
     <View
       style={
         Object {
           "alignItems": "center",
+          "backgroundColor": "transparent",
           "flex": 1,
           "flexDirection": "row",
-          "justifyContent": "space-evenly",
+          "justifyContent": "space-between",
+          "maxHeight": 100,
         }
       }
     >
@@ -100,45 +153,71 @@ exports[`renders correctly 1`] = `
         ellipsizeMode="tail"
         style={
           Object {
+            "color": "#000000",
             "fontFamily": "sans-serif",
-            "fontSize": 25,
+            "fontSize": 20,
           }
         }
       >
         Agent fee
       </Text>
-      <TextInput
-        allowFontScaling={true}
-        keyboardType="numeric"
-        onChangeText={[Function]}
-        placeholder="0"
+      <View
         style={
           Object {
-            "fontSize": 30,
-          }
-        }
-      />
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Object {
-            "fontFamily": "sans-serif",
-            "fontSize": 25,
+            "alignItems": "center",
+            "backgroundColor": "white",
+            "borderBottomWidth": 1.5,
+            "borderColor": "rgb(211,211,211)",
+            "borderRadius": 5,
+            "flex": 1,
+            "flexDirection": "row",
+            "justifyContent": "flex-end",
+            "maxWidth": 120,
+            "padding": 5,
           }
         }
       >
-        %
-      </Text>
+        <TextInput
+          allowFontScaling={true}
+          keyboardType="phone-pad"
+          multiline={false}
+          onChangeText={[Function]}
+          placeholder="0"
+          placeholderTextColor="#bbbbbb"
+          selectTextOnFocus={true}
+          style={
+            Object {
+              "color": "#000000",
+              "fontSize": 20,
+              "margin": 5,
+            }
+          }
+          underlineColorAndroid="transparent"
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#bbbbbb",
+              "fontFamily": "sans-serif",
+              "fontSize": 20,
+            }
+          }
+        >
+          %
+        </Text>
+      </View>
     </View>
     <View
       style={
         Object {
           "alignItems": "center",
-          "flex": 1,
+          "flex": 0,
           "flexDirection": "row",
           "justifyContent": "space-evenly",
+          "marginTop": 50,
         }
       }
     >
@@ -148,53 +227,30 @@ exports[`renders correctly 1`] = `
         ellipsizeMode="tail"
         style={
           Object {
-            "fontFamily": "sans-serif",
-            "fontSize": 25,
+            "fontSize": 15,
           }
         }
       >
-        Advertising
+        Agent fee includes GST
       </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
+      <RCTSwitch
+        disabled={false}
+        onChange={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        onValueChange={[Function]}
         style={
-          Object {
-            "fontFamily": "sans-serif",
-            "fontSize": 25,
-          }
+          Array [
+            Object {
+              "height": 31,
+              "width": 51,
+            },
+            undefined,
+          ]
         }
-      >
-        $
-      </Text>
-      <TextInput
-        allowFontScaling={true}
-        keyboardType="numeric"
-        onChangeText={[Function]}
-        placeholder="0"
-        style={
-          Object {
-            "fontSize": 30,
-          }
-        }
+        value={false}
       />
     </View>
   </View>
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
-    style={
-      Object {
-        "fontSize": 20,
-        "marginBottom": 20,
-        "marginTop": 60,
-      }
-    }
-  >
-    Commission: $
-    0
-  </Text>
 </View>
 `;
