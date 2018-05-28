@@ -31,7 +31,7 @@ exports[`renders correctly 1`] = `
         }
       }
     >
-      
+      $0
     </Text>
     <Text
       accessible={true}
@@ -87,6 +87,19 @@ exports[`renders correctly 1`] = `
         Sale price
       </Text>
       <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        hitSlop={undefined}
+        nativeID={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
         style={
           Object {
             "alignItems": "center",
@@ -101,6 +114,7 @@ exports[`renders correctly 1`] = `
             "padding": 5,
           }
         }
+        testID={undefined}
       >
         <Text
           accessible={true}
@@ -162,6 +176,19 @@ exports[`renders correctly 1`] = `
         Agent fee
       </Text>
       <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        hitSlop={undefined}
+        nativeID={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
         style={
           Object {
             "alignItems": "center",
@@ -176,6 +203,7 @@ exports[`renders correctly 1`] = `
             "padding": 5,
           }
         }
+        testID={undefined}
       >
         <TextInput
           allowFontScaling={true}

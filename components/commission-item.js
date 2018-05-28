@@ -1,6 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput } from 'react-native';
-import NumericInput from 'react-native-numeric-input'
+import { StyleSheet, Text, View, TextInput, TouchableWithoutFeedback } from 'react-native';
 
 export default class CommissionItem extends React.Component {
 
@@ -19,25 +18,30 @@ export default class CommissionItem extends React.Component {
         return (
             <View style={itemstyles.icontainer}>
                 <Text style={itemstyles.text}>{this.props.title}</Text>
-                <View style={itemstyles.input}>
-                    {this.props.type !== 'percent' ? <Text style={this.state.value ? itemstyles.dollar : itemstyles.dollarNoValue}>$</Text> : null}
-                    <TextInput
-                        style={{
-                            fontSize: 20,
-                            color: '#000000',
-                            margin: 5
-                        }}
-                        placeholder="0"
-                        placeholderTextColor="#bbbbbb"
-                        onChangeText={val => this.handleChange(val)}
-                        keyboardType="phone-pad"
-                        multiline={false}
-                        underlineColorAndroid="transparent"
-                        selectTextOnFocus
-                    />
-                    {this.props.type === 'percent' ? <Text style={this.state.value ?
-                        itemstyles.dollar : itemstyles.dollarNoValue}>%</Text> : null}
-                </View>
+                <TouchableWithoutFeedback
+                    onPress={() => {
+                        this.refs.in.focus();
+                    }} >
+                    <View style={this.state.focused ? itemstyles.focused : itemstyles.input}>{this.props.type !== 'percent' ? <Text style={this.state.value ? itemstyles.dollar : itemstyles.dollarNoValue}>$</Text> : null}
+                        <TextInput
+                            style={{
+                                fontSize: 20,
+                                color: '#000000',
+                                margin: 5
+                            }}
+                            placeholder="0"
+                            placeholderTextColor="#bbbbbb"
+                            onChangeText={val => this.handleChange(val)}
+                            keyboardType="phone-pad"
+                            multiline={false}
+                            underlineColorAndroid="transparent"
+                            selectTextOnFocus
+                            ref='in'
+                        />
+                        {this.props.type === 'percent' ? <Text style={this.state.value ?
+                            itemstyles.dollar : itemstyles.dollarNoValue}>%</Text> : null}
+                    </View>
+                </TouchableWithoutFeedback>
             </View>
         );
     }
@@ -74,6 +78,18 @@ const itemstyles = StyleSheet.create({
         borderRadius: 5,
         borderBottomWidth: 1.5,
         borderColor: 'rgb(211,211,211)',
+        backgroundColor: 'white',
+        maxWidth: 120,
+        padding: 5
+    },
+    focused: {
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'flex-end',
+        borderRadius: 5,
+        borderBottomWidth: 1.5,
+        borderColor: 'blue',
         backgroundColor: 'white',
         maxWidth: 120,
         padding: 5
